@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Справжня сила — це добровільна слабкість заради іншого</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .bg-wale {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1145%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c398 C 128%2c438.6 384%2c600.8 640%2c601 C 896%2c601.2 1024%2c386.2 1280%2c399 C 1536%2c411.8 1792%2c611.8 1920%2c665L1920 1080L0 1080z' fill='rgba(219%2c 234%2c 254%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1145'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .header--hidden {
+      transform: translateY(-100%);
+      transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    header {
+      transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+  </style>
+  <meta name="description" content="Справжня сила — це добровільна слабкість заради іншого. Аргументи, приклади, висновки та заклик до дії. Український мотиваційний сайт від L_Sergiy.">
+  <meta name="keywords" content="сила, слабкість, мотивація, любов, жертовність, аргументи, приклад, висновок, заклик, L_Sergiy">
+  <meta name="author" content="L_Sergiy">
+  <meta property="og:title" content="Справжня сила — це добровільна слабкість заради іншого" />
+  <meta property="og:description" content="Аргументи, приклади, висновки та заклик до дії. Український мотиваційний сайт від L_Sergiy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://l-sergiy.github.io/strength-weakness" />
+  <meta property="og:image" content="https://l-sergiy.github.io/og-image.jpg" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:site_name" content="Справжня сила — це добровільна слабкість заради іншого" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Справжня сила — це добровільна слабкість заради іншого" />
+  <meta name="twitter:description" content="Аргументи, приклади, висновки та заклик до дії. Український мотиваційний сайт від L_Sergiy." />
+  <meta name="twitter:image" content="https://l-sergiy.github.io/og-image.jpg" />
+  <meta name="twitter:site" content="@l_sergiy" />
+  <meta name="twitter:creator" content="@l_sergiy" />
+  <link rel="canonical" href="https://l-sergiy.github.io/strength-weakness" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#e0e7ef" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Справжня сила — це добровільна слабкість заради іншого",
+    "url": "https://l-sergiy.github.io/strength-weakness",
+    "description": "Аргументи, приклади, висновки та заклик до дії. Український мотиваційний сайт від L_Sergiy.",
+    "inLanguage": "uk",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Головна",
+          "item": "https://l-sergiy.github.io/strength-weakness"
+        }
+      ]
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://l-sergiy.github.io/strength-weakness/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Person",
+      "name": "L_Sergiy",
+      "url": "https://github.com/L-Sergiy"
+    },
+    "potentialAction": [
+      {
+        "@type": "ReadAction",
+        "target": ["https://l-sergiy.github.io/strength-weakness"]
+      },
+      {
+        "@type": "SearchAction",
+        "target": "https://l-sergiy.github.io/strength-weakness?q={search_term_string}",
+        "query-input": {
+          "@type": "PropertyValueSpecification",
+          "valueRequired": true,
+          "valueName": "search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Справжня сила — це добровільна слабкість заради іншого",
+    "url": "https://l-sergiy.github.io/strength-weakness",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://l-sergiy.github.io/strength-weakness?q={search_term_string}"
+      },
+      "query-input": {
+        "@type": "PropertyValueSpecification",
+        "valueRequired": true,
+        "valueName": "search_term_string"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Справжня сила — це добровільна слабкість заради іншого",
+    "description": "Аргументи, приклади, висновки та заклик до дії. Український мотиваційний сайт від L_Sergiy.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "L_Sergiy",
+        "url": "https://github.com/L-Sergiy"
+      }
+    ],
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://l-sergiy.github.io/strength-weakness/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://l-sergiy.github.io/strength-weakness"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "L_Sergiy"
+    },
+    "datePublished": "2025-06-17",
+    "video": {
+      "@type": "VideoObject",
+      "name": "Відео про силу любові",
+      "description": "Мотиваційне відео про справжню силу та жертовність.",
+      "thumbnailUrl": ["https://l-sergiy.github.io/strength-weakness/og-image.jpg"],
+      "uploadDate": "2025-06-17",
+      "contentUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Author",
+    "name": "L_Sergiy",
+    "url": "https://github.com/L-Sergiy",
+    "sameAs": [
+      "https://github.com/L-Sergiy",
+      "https://twitter.com/l_sergiy"
+    ]
+  }
+  </script>
+  <link rel="alternate" href="https://l-sergiy.github.io/strength-weakness" hreflang="uk-UA" />
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+  <div class="mx-auto flex flex-col items-center justify-center">    
+    <header class="flex justify-between items-center w-full bg-white backdrop-blur-xl fixed top-0 left-0 right-0 z-50 shadow-lg p-4">
+
+      <button id="menuBtn" class="lg:hidden z-50 p-4 text-4xl">☰</button>
+
+      <ul class="hidden lg:flex">
+        <li><a href="#thesis" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Теза</a></li>
+        <li><a href="#arguments" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Аргументи</a></li>
+        <li><a href="#example" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Приклад</a></li>
+        <li><a href="#conclusion" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Висновок</a></li>
+        <li><a href="#call" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Заклик</a></li>
+      </ul>
+
+
+      <div class="flex">
+        <button class="text-4xl my-[30px] px-3 sm:my-[40px] m-[9px] sm:m-[40px] font-semibold" data-lang="ua">ua</button>
+        <button class="text-4xl my-[30px] px-3 sm:my-[40px] m-[9px] sm:m-[40px] font-semibold" data-lang="en">en</button>
+      </div>
+    </header>
+    <!-- Список для мобільного меню переносимо нижче -->
+    <div id="mobileMenu" class="fixed inset-0 bg-blue-100 z-40 hidden lg:hidden flex flex-col items-center justify-center pt-24">
+      <button id="closeBtn" class="absolute top-4 right-4 text-4xl font-light cursor-pointer">✕</button>
+        <ul class="flex flex-col items-center space-y-8 mt-8">
+          <li><a href="#thesis" class="text-4xl font-semibold cursor-pointer">Теза</a></li>
+          <li><a href="#arguments" class="text-4xl font-semibold cursor-pointer">Аргументи</a></li>
+          <li><a href="#example" class="text-4xl font-semibold cursor-pointer">Приклад</a></li>
+          <li><a href="#conclusion" class="text-4xl font-semibold cursor-pointer">Висновок</a></li>
+          <li><a href="#call" class="text-4xl font-semibold cursor-pointer">Заклик</a></li>
+        </ul>
+    </div>
+    <div class="bg-wale -z-10 w-full max-w-full overflow-hidden">
+      <div class="h-screen flex items-center justify-between mx-8 sm:mx-48">
+        <h1 id="thesis" class="text-6xl sm:text-9xl font-bold fade-in tracking-wide">Справжня сила — це добровільна слабкість заради іншого.</h1>
+      </div>
+    </div>
+
+    <h2 id="arguments" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold">Аргументи</h2>
+    <div id="texts-container" class="-z-10"></div>
+  </div>
+
+    <h3 id="example" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Приклад</h3>
+    <div class="reveal bg-white p-8 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10">У багатодітній сім’ї батько працює на двох роботах, 
+      повертається вночі, не дозволяє собі відпочинку, щоб його діти мали їжу, одяг і навчання. Хтось скаже — він втомлений і виснажений. Але в Божих очах він — герой, 
+      тому що його добровільна жертва — це сила любові в дії.</div>
+
+    <h4 id="conclusion" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Висновок</h4>
+    <div class="reveal bg-white p-8 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10">Справжня сила — це не вміння перемагати інших, 
+      а вміння перемагати себе. Це сила змовчати, коли хочеш вигукнути. Сила пробачити, коли серце палає від образи. Сила віддати останнє, коли й самому важко. 
+      Такої сили не побачиш на перших шпальтах, але саме вона тримає сім’ї, народи й цілий світ.</div>
+
+    <h5 id="call"  class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Заклик</h5>
+    <div class="reveal bg-white p-8 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10 mb-48">Будь сильним не у владі, а в любові. 
+      Вчися поступатися, підтримувати, бути поруч, навіть коли це важко. Обирай не легкий шлях, а правильний. І проси в Бога сили — не для того, щоб ставити себе вище, 
+      а щоб ставити інших перед собою.</div>
+  <script src="script.js"></script>
+</body>
+</html>

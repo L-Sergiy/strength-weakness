@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://l-sergiy.github.io/sitemap.xml
