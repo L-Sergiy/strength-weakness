@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
       container.innerHTML = '';
       translations[lang].argumentsTexts.forEach(text => {
         const div = document.createElement('div');
-        div.className = "reveal bg-white p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800";
+        div.className = "reveal bg-white p-5 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-10 text-2xl sm:text-3xl text-gray-800";
         div.textContent = text;
         container.appendChild(div);
       });
