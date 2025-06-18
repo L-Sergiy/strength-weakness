@@ -193,14 +193,7 @@
 
       <button id="menuBtn" class="lg:hidden z-50 p-4 text-4xl">☰</button>
 
-      <ul class="hidden lg:flex">
-        <li><a href="#thesis" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Теза</a></li>
-        <li><a href="#arguments" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Аргументи</a></li>
-        <li><a href="#example" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Приклад</a></li>
-        <li><a href="#conclusion" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Висновок</a></li>
-        <li><a href="#call" class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer">Заклик</a></li>
-      </ul>
-
+      <ul id="listItem" class="hidden lg:flex"></ul>
 
       <div class="flex">
         <button class="text-4xl my-[30px] px-3 sm:my-[40px] m-[9px] sm:m-[40px] font-semibold" data-lang="ua">ua</button>
@@ -210,13 +203,7 @@
     <!-- Список для мобільного меню переносимо нижче -->
     <div id="mobileMenu" class="fixed inset-0 bg-blue-100 z-40 hidden lg:hidden flex flex-col items-center justify-center pt-24">
       <button id="closeBtn" class="absolute top-4 right-4 text-4xl font-light cursor-pointer">✕</button>
-        <ul class="flex flex-col items-center space-y-8 mt-8">
-          <li><a href="#thesis" class="text-4xl font-semibold cursor-pointer">Теза</a></li>
-          <li><a href="#arguments" class="text-4xl font-semibold cursor-pointer">Аргументи</a></li>
-          <li><a href="#example" class="text-4xl font-semibold cursor-pointer">Приклад</a></li>
-          <li><a href="#conclusion" class="text-4xl font-semibold cursor-pointer">Висновок</a></li>
-          <li><a href="#call" class="text-4xl font-semibold cursor-pointer">Заклик</a></li>
-        </ul>
+        <ul id="listItemMobile" class="flex flex-col items-center space-y-8 mt-8"></ul>
     </div>
     <div class="bg-wale -z-10 w-full max-w-full overflow-hidden">
       <div class="h-screen flex items-center justify-between mx-4 sm:mx-48">
@@ -224,24 +211,23 @@
       </div>
     </div>
 
-    <h2 id="arguments" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold">Аргументи</h2>
-    <div id="texts-container" class="-z-10"></div>
-  </div>
+      <h2 id="arguments" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Аргументи</h2>
+      <div id="texts-container" class="-z-10"></div>
 
-    <h3 id="example" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Приклад</h3>
-    <div class="reveal bg-white p-8 p-5 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10">У багатодітній сім’ї батько працює на двох роботах, 
-      повертається вночі, не дозволяє собі відпочинку, щоб його діти мали їжу, одяг і навчання. Хтось скаже — він втомлений і виснажений. Але в Божих очах він — герой, 
-      тому що його добровільна жертва — це сила любові в дії.</div>
+      <h3 id="example" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Приклад</h3>
+      <div class="reveal bg-white p-5 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10">У багатодітній сім’ї батько працює на двох роботах, 
+        повертається вночі, не дозволяє собі відпочинку, щоб його діти мали їжу, одяг і навчання. Хтось скаже — він втомлений і виснажений. Але в Божих очах він — герой, 
+        тому що його добровільна жертва — це сила любові в дії.</div>
 
-    <h4 id="conclusion" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Висновок</h4>
-    <div class="reveal bg-white p-8 p-5 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10">Справжня сила — це не вміння перемагати інших, 
-      а вміння перемагати себе. Це сила змовчати, коли хочеш вигукнути. Сила пробачити, коли серце палає від образи. Сила віддати останнє, коли й самому важко. 
-      Такої сили не побачиш на перших шпальтах, але саме вона тримає сім’ї, народи й цілий світ.</div>
+      <h4 id="conclusion" class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Висновок</h4>
+      <div class="reveal bg-white p-5 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10">Справжня сила — це не вміння перемагати інших, 
+        а вміння перемагати себе. Це сила змовчати, коли хочеш вигукнути. Сила пробачити, коли серце палає від образи. Сила віддати останнє, коли й самому важко. 
+        Такої сили не побачиш на перших шпальтах, але саме вона тримає сім’ї, народи й цілий світ.</div>
 
-    <h5 id="call"  class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Заклик</h5>
-    <div class="reveal bg-white p-8 p-5 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10 mb-10 sm:mb-48">Будь сильним не у владі, а в любові. 
-      Вчися поступатися, підтримувати, бути поруч, навіть коли це важко. Обирай не легкий шлях, а правильний. І проси в Бога сили — не для того, щоб ставити себе вище, 
-      а щоб ставити інших перед собою.</div>
+      <h5 id="call"  class="text-5xl sm:text-7xl reveal m-8 sm:m-24 -z-10 font-bold text-center">Заклик</h5>
+      <div class="reveal bg-white p-5 sm:p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800 -z-10 mb-10 sm:mb-48">Будь сильним не у владі, а в любові. 
+        Вчися поступатися, підтримувати, бути поруч, навіть коли це важко. Обирай не легкий шлях, а правильний. І проси в Бога сили — не для того, щоб ставити себе вище, 
+        а щоб ставити інших перед собою.</div>
   <script src="script.js"></script>
 </body>
 </html>

@@ -17,6 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 
+    const navMenu = [
+      {href : "#thesis", name: "Теза"},
+      {href : "#arguments", name: "Аргументи"},
+      {href : "#example", name : "Приклад"},
+      {href : "#conclusion", name : "Висновок"},
+      {href : "#call", name : "Заклик"},
+    ];
+
     const thoughts = [
       "Любов вимагає жертви. Кожна щира любов — батьківська, подружня, братерська — включає в себе моменти, коли ти добровільно обираєш слабкість. Мама, яка не їсть, щоб нагодувати дитину, чи хлопець, який відмовляється від кар’єрного шансу, щоб залишитися біля хворої мами — це сила, прихована в доброті й вірності.",
       "Ісус Христос — зразок справжньої сили. Його шлях на хрест був добровільним. Він мав силу творити чудеса, зцілювати, командувати природою. Але найбільше диво — це Його мовчазна згода прийняти біль, приниження й смерть, щоб дати життя нам. Слабкість на хресті — це вершина сили любові.",
@@ -25,10 +33,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const container = document.getElementById("texts-container");
     thoughts.forEach(text => {
-      const div = document.createElement("h6");
+      const div = document.createElement("div");
       div.className = "reveal bg-white p-10 rounded-xl shadow-sm mx-8 sm:mx-96 my-20 text-2xl sm:text-3xl text-gray-800";
       div.textContent = text;
       container.appendChild(div);
+    });
+
+    const listItem = document.getElementById("listItem");
+    listItem.innerHTML = ""; // очищення перед додаванням
+    navMenu.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.className = "m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[40px] font-semibold cursor-pointer";
+      a.href = `${item.href}`;
+      a.textContent = item.name;
+      li.appendChild(a);
+      listItem.appendChild(li);
+    });
+
+    const listItemMobile = document.getElementById("listItemMobile");
+    listItemMobile.innerHTML = ""; // очищення перед додаванням
+    navMenu.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.className = "text-4xl font-semibold cursor-pointer";
+      a.href = `${item.href}`;
+      a.textContent = item.name;
+      li.appendChild(a);
+      listItemMobile.appendChild(li);
     });
 
     const translations = {
@@ -101,15 +133,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
       document.getElementById('call').textContent = translations[lang].callTitle;
       document.querySelector('#call + div').textContent = translations[lang].callText;
+
+      updateBurgerMenuLanguage(lang);
+
+      // Після оновлення меню, потрібно перевісити обробники для мобільного меню
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      header.classList.remove('header--hidden'); // показуємо хедер
+      document.body.style.overflow = '';
+    });
+  });
+    }
+
+    function updateBurgerMenuLanguage(lang) {
+      const listItemMobile = document.getElementById("listItemMobile");
+      listItemMobile.innerHTML = ""; // очищення перед додаванням
+      const navMenuTranslations = [
+        { href: "#thesis", name: translations[lang].navThesis },
+        { href: "#arguments", name: translations[lang].navArguments },
+        { href: "#example", name: translations[lang].navExample },
+        { href: "#conclusion", name: translations[lang].navConclusion },
+        { href: "#call", name: translations[lang].navCall },
+      ];
+
+      navMenuTranslations.forEach(item => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.className = "text-4xl font-semibold cursor-pointer";
+        a.href = `${item.href}`;
+        a.textContent = item.name;
+        li.appendChild(a);
+        listItemMobile.appendChild(li);
+      });
     }
 
     document.querySelectorAll('button[data-lang]').forEach(button => {
-  button.addEventListener('click', () => {
+      button.addEventListener('click', () => {
     setLanguage(button.dataset.lang);
   });
 });
 
 setLanguage('ua');
+updateBurgerMenuLanguage('ua');
 
 // === Header hide/show on scroll ===
 let lastScrollY = window.scrollY;
